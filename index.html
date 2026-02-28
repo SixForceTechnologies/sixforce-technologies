@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
     <title>SixForce Technologies | Websites & Billing Software</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Affordable websites, web applications & billing software for growing businesses in Tamil Nadu. Fast delivery with Tamil & English support.">
     <style>
         * {
             margin: 0;
@@ -13,195 +12,332 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #f8fafc;
-            color: #1e293b;
-            line-height: 1.6;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.7;
+            color: #334155;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            min-height: 100vh;
         }
 
-        header {
-            background: white;
-            padding: 20px 8%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-        }
-
-        .logo {
-            font-size: 20px;
-            font-weight: 600;
-            color: #0f172a;
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
         }
 
         .hero {
-            padding: 80px 8%;
-            display: flex;
-            flex-direction: column;
-            max-width: 1200px;
-            margin: auto;
+            text-align: center;
+            padding: 4rem 0;
         }
 
         .hero h1 {
-            font-size: 42px;
-            font-weight: 700;
-            margin-bottom: 20px;
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 800;
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
         }
 
-        .hero p {
-            font-size: 18px;
-            color: #475569;
-            max-width: 650px;
+        .hero-subtitle {
+            font-size: clamp(1.1rem, 3vw, 1.3rem);
+            max-width: 600px;
+            margin: 0 auto 2.5rem;
+            color: #64748b;
         }
 
-        .cta {
-            margin-top: 30px;
-        }
-
-        .btn-primary {
+        .cta-button {
             display: inline-block;
-            padding: 14px 28px;
-            background: #0ea5e9;
+            padding: 1rem 2.5rem;
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
             color: white;
             text-decoration: none;
-            border-radius: 6px;
             font-weight: 600;
-            transition: 0.3s;
-        }
-
-        .btn-primary:hover {
-            background: #0284c7;
-        }
-
-        section {
-            padding: 70px 8%;
-            max-width: 1200px;
-            margin: auto;
-        }
-
-        section h2 {
-            font-size: 28px;
-            margin-bottom: 30px;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 25px;
-        }
-
-        .card {
-            background: white;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-        }
-
-        .card h3 {
-            margin-bottom: 10px;
-            font-size: 18px;
-        }
-
-        .about {
-            background: white;
-            padding: 40px;
+            font-size: 1.1rem;
             border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.4);
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s;
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        .section {
+            margin: 5rem 0;
+        }
+
+        .section h2 {
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 2.5rem;
+            text-align: center;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2.5rem 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            border: 1px solid rgba(148, 163, 184, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #3b82f6, #10b981, #f59e0b);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+        }
+
+        .feature-list {
+            list-style: none;
+            text-align: left;
+        }
+
+        .feature-list li {
+            padding: 0.75rem 0;
+            padding-left: 2rem;
+            position: relative;
+            font-size: 1.1rem;
+            color: #475569;
+        }
+
+        .feature-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #10b981;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .about-section {
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about-section p {
+            font-size: 1.2rem;
+            color: #64748b;
+            margin-bottom: 2.5rem;
+        }
+
+        .phone-cta {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: #10b981;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            box-shadow: 0 8px 25px rgba(16, 185, 129, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .phone-cta:hover {
+            background: #059669;
+            transform: translateY(-2px);
+            box-shadow: 0 15px 35px rgba(16, 185, 129, 0.4);
         }
 
         footer {
+            background: #f1f5f9;
+            padding: 2.5rem 1rem;
             text-align: center;
-            padding: 40px 20px;
             color: #64748b;
-            font-size: 14px;
+            font-size: 0.95rem;
+            border-top: 1px solid #e2e8f0;
+            margin-top: 4rem;
         }
 
-        @media (max-width: 768px) {
+        /* Mobile Optimizations */
+        @media (max-width: 640px) {
+            .container {
+                padding: 1.5rem 1rem;
+            }
+            
+            .hero {
+                padding: 2.5rem 0;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .feature-card {
+                padding: 2rem 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
             .hero h1 {
-                font-size: 32px;
+                margin-bottom: 1rem;
+            }
+            
+            .cta-button, .phone-cta {
+                padding: 0.9rem 2rem;
+                font-size: 1rem;
+            }
+        }
+
+        /* Tablet */
+        @media (min-width: 641px) and (max-width: 1024px) {
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
     </style>
 </head>
-
 <body>
+    <div class="container">
+        <section class="hero">
+            <h1>SixForce Technologies</h1>
+            <p class="hero-subtitle">
+                Affordable Websites, Web Applications & Billing Software for Growing Businesses
+            </p>
+            <a href="https://wa.me/919944226038" class="cta-button" target="_blank">
+                Get Free Consultation
+            </a>
+        </section>
 
-<header>
-    <div class="logo">SixForce Technologies</div>
-    <a href="https://wa.me/919944226038" class="btn-primary">WhatsApp</a>
-</header>
+        <section class="section">
+            <h2>What We Build</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🌐</div>
+                    <ul class="feature-list">
+                        <li>Business Websites</li>
+                        <li>Admin Panels & Dashboards</li>
+                        <li>Custom Web Applications</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <ul class="feature-list">
+                        <li>Billing Software for Shops</li>
+                        <li>Inventory Management</li>
+                        <li>Payment Integration</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-<div class="hero">
-    <h1>Websites & Custom Software Built for Growing Businesses</h1>
-    <p>
-        We help medical shops, retail stores, clinics and small businesses build 
-        professional websites and reliable billing software that improve efficiency and growth.
-    </p>
+        <section class="section">
+            <h2>Why Businesses Choose Us</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">💸</div>
+                    <ul class="feature-list">
+                        <li>Affordable Pricing</li>
+                        <li>Fast Delivery</li>
+                        <li>No Hidden Costs</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🗣️</div>
+                    <ul class="feature-list">
+                        <li>Tamil & English Support</li>
+                        <li>Direct Developer Communication</li>
+                        <li>Lifetime Support</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-    <div class="cta">
-        <a href="https://wa.me/919944226038" class="btn-primary">Get Free Consultation</a>
+        <section class="section">
+            <h2>Perfect For</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🏥</div>
+                    <ul class="feature-list">
+                        <li>Medical Shops</li>
+                        <li>Clinics & Hospitals</li>
+                        <li>Pharmacies</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🏪</div>
+                    <ul class="feature-list">
+                        <li>Retail Stores</li>
+                        <li>Schools & Education</li>
+                        <li>Small & Medium Businesses</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="about-section">
+                <h2>About</h2>
+                <p>
+                    Founded by Premraj, SixForce Technologies helps businesses build modern, 
+                    reliable and easy-to-use software solutions that improve growth and efficiency.
+                </p>
+                <a href="tel:+919944226038" class="phone-cta">
+                    Call Now: +91 99442 26038
+                </a>
+            </div>
+        </section>
     </div>
-</div>
 
-<section>
-    <h2>Our Services</h2>
-
-    <div class="grid">
-        <div class="card">
-            <h3>Business Websites</h3>
-            <p>Modern, mobile-friendly websites that build trust and generate enquiries.</p>
-        </div>
-
-        <div class="card">
-            <h3>Billing Software</h3>
-            <p>Simple, easy-to-use billing systems for medical shops and retail businesses.</p>
-        </div>
-
-        <div class="card">
-            <h3>Custom Web Applications</h3>
-            <p>Admin panels and business management systems tailored to your needs.</p>
-        </div>
-    </div>
-</section>
-
-<section>
-    <h2>Why Choose SixForce</h2>
-
-    <div class="grid">
-        <div class="card">
-            <h3>Affordable & Transparent Pricing</h3>
-        </div>
-
-        <div class="card">
-            <h3>Direct Developer Communication</h3>
-        </div>
-
-        <div class="card">
-            <h3>Tamil & English Support</h3>
-        </div>
-
-        <div class="card">
-            <h3>Fast Delivery & Ongoing Support</h3>
-        </div>
-    </div>
-</section>
-
-<section>
-    <h2>About</h2>
-    <div class="about">
-        Founded by Premraj, SixForce Technologies focuses on delivering practical 
-        and efficient software solutions for businesses across Tamil Nadu.
-    </div>
-</section>
-
-<section>
-    <h2>Ready to Upgrade Your Business?</h2>
-    <a href="tel:+919944226038" class="btn-primary">Call Now</a>
-</section>
-
-<footer>
-    © 2026 SixForce Technologies | Tamil Nadu, India
-</footer>
-
+    <footer>
+        <p>© 2026 SixForce Technologies | Chennai, Tamil Nadu, India</p>
+    </footer>
 </body>
 </html>
