@@ -1,111 +1,206 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>SixForce Technologies | Websites & Billing Software</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <style>
-        body {
+        * {
             margin: 0;
-            font-family: 'Segoe UI', sans-serif;
-            background: #0f172a;
-            color: white;
-            text-align: center;
+            padding: 0;
+            box-sizing: border-box;
         }
-        .container {
-            padding: 60px 20px;
-            max-width: 900px;
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f8fafc;
+            color: #1e293b;
+            line-height: 1.6;
+        }
+
+        header {
+            background: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: 600;
+            color: #0f172a;
+        }
+
+        .hero {
+            padding: 80px 8%;
+            display: flex;
+            flex-direction: column;
+            max-width: 1200px;
             margin: auto;
         }
-        h1 {
+
+        .hero h1 {
             font-size: 42px;
-            color: #00e5ff;
+            font-weight: 700;
+            margin-bottom: 20px;
         }
-        h2 {
-            color: #38bdf8;
-            margin-top: 50px;
-        }
-        p {
+
+        .hero p {
             font-size: 18px;
-            line-height: 1.6;
-            color: #cbd5e1;
+            color: #475569;
+            max-width: 650px;
         }
-        .btn {
-            display: inline-block;
+
+        .cta {
             margin-top: 30px;
-            padding: 15px 35px;
-            background: #00e5ff;
-            color: black;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            padding: 14px 28px;
+            background: #0ea5e9;
+            color: white;
             text-decoration: none;
-            font-weight: bold;
-            border-radius: 8px;
+            border-radius: 6px;
+            font-weight: 600;
             transition: 0.3s;
         }
-        .btn:hover {
-            background: #22d3ee;
+
+        .btn-primary:hover {
+            background: #0284c7;
         }
-        .box {
-            background: #1e293b;
+
+        section {
+            padding: 70px 8%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        section h2 {
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
             padding: 25px;
-            margin-top: 25px;
-            border-radius: 12px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
         }
+
+        .card h3 {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .about {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+
         footer {
-            margin-top: 60px;
-            padding: 20px;
-            background: #020617;
+            text-align: center;
+            padding: 40px 20px;
+            color: #64748b;
             font-size: 14px;
-            color: #94a3b8;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
         }
     </style>
 </head>
+
 <body>
 
-<div class="container">
-    <h1>SixForce Technologies</h1>
-    <p>Affordable Websites, Web Applications & Billing Software for Growing Businesses.</p>
+<header>
+    <div class="logo">SixForce Technologies</div>
+    <a href="https://wa.me/919944226038" class="btn-primary">WhatsApp</a>
+</header>
 
-    <a class="btn" href="https://wa.me/919944226038">Get Free Consultation</a>
-
-    <h2>What We Build</h2>
-
-    <div class="box">
-        ✔ Business Websites<br>
-        ✔ Admin Panels & Dashboards<br>
-        ✔ Billing Software for Shops<br>
-        ✔ Custom Web Applications
-    </div>
-
-    <h2>Why Businesses Choose Us</h2>
-
-    <div class="box">
-        ✔ Affordable Pricing<br>
-        ✔ Fast Delivery<br>
-        ✔ Tamil & English Support<br>
-        ✔ Direct Developer Communication
-    </div>
-
-    <h2>Perfect For</h2>
-
-    <div class="box">
-        ✔ Medical Shops<br>
-        ✔ Retail Stores<br>
-        ✔ Clinics<br>
-        ✔ Schools<br>
-        ✔ Small & Medium Businesses
-    </div>
-
-    <h2>About</h2>
-
+<div class="hero">
+    <h1>Websites & Custom Software Built for Growing Businesses</h1>
     <p>
-        Founded by Premraj, SixForce Technologies helps businesses build modern,
-        reliable and easy-to-use software solutions that improve growth and efficiency.
+        We help medical shops, retail stores, clinics and small businesses build 
+        professional websites and reliable billing software that improve efficiency and growth.
     </p>
 
-    <a class="btn" href="tel:+919944226038">Call Now</a>
+    <div class="cta">
+        <a href="https://wa.me/919944226038" class="btn-primary">Get Free Consultation</a>
+    </div>
 </div>
 
+<section>
+    <h2>Our Services</h2>
+
+    <div class="grid">
+        <div class="card">
+            <h3>Business Websites</h3>
+            <p>Modern, mobile-friendly websites that build trust and generate enquiries.</p>
+        </div>
+
+        <div class="card">
+            <h3>Billing Software</h3>
+            <p>Simple, easy-to-use billing systems for medical shops and retail businesses.</p>
+        </div>
+
+        <div class="card">
+            <h3>Custom Web Applications</h3>
+            <p>Admin panels and business management systems tailored to your needs.</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>Why Choose SixForce</h2>
+
+    <div class="grid">
+        <div class="card">
+            <h3>Affordable & Transparent Pricing</h3>
+        </div>
+
+        <div class="card">
+            <h3>Direct Developer Communication</h3>
+        </div>
+
+        <div class="card">
+            <h3>Tamil & English Support</h3>
+        </div>
+
+        <div class="card">
+            <h3>Fast Delivery & Ongoing Support</h3>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>About</h2>
+    <div class="about">
+        Founded by Premraj, SixForce Technologies focuses on delivering practical 
+        and efficient software solutions for businesses across Tamil Nadu.
+    </div>
+</section>
+
+<section>
+    <h2>Ready to Upgrade Your Business?</h2>
+    <a href="tel:+919944226038" class="btn-primary">Call Now</a>
+</section>
+
 <footer>
-© 2026 SixForce Technologies | Tamil Nadu, India
+    © 2026 SixForce Technologies | Tamil Nadu, India
 </footer>
 
 </body>
