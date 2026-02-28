@@ -1,385 +1,278 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>SixForce Technologies | Websites & Billing Software</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Affordable websites, web apps & billing software for Tamil Nadu businesses. Fast delivery with direct developer support.">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<meta charset="UTF-8">
+<title>SixForce Technologies | Premium Web & Software Solutions</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', system-ui, sans-serif;
-            line-height: 1.7;
-            color: #2d3748;
-            background: #fafbfc;
-            overflow-x: hidden;
-        }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 1.5rem;
-        }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #f9fafb;
+    color: #0f172a;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
 
-        /* Header/Hero */
-        .hero {
-            text-align: center;
-            padding: 5rem 0 3rem;
-            position: relative;
-        }
+/* Smooth scroll */
+html {
+    scroll-behavior: smooth;
+}
 
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background: #4299e1;
-        }
+/* Header */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 20px 8%;
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
 
-        .hero h1 {
-            font-size: clamp(2.8rem, 7vw, 4.5rem);
-            font-weight: 800;
-            color: #2d3748;
-            margin-bottom: 1rem;
-            letter-spacing: -0.025em;
-        }
+.logo {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
 
-        .hero-subtitle {
-            font-size: clamp(1.15rem, 3vw, 1.35rem);
-            color: #718096;
-            max-width: 650px;
-            margin: 0 auto 3rem;
-            font-weight: 400;
-        }
+.logo span {
+    background: linear-gradient(90deg,#2563eb,#0ea5e9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
-        .cta-primary {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.75rem;
-            padding: 1.25rem 2.75rem;
-            background: #4299e1;
-            color: white;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1rem;
-            border-radius: 16px;
-            box-shadow: 0 4px 20px rgba(66, 153, 225, 0.3);
-            transition: all 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            position: relative;
-            overflow: hidden;
-        }
+.btn {
+    padding: 12px 24px;
+    background: linear-gradient(90deg,#2563eb,#0ea5e9);
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
 
-        .cta-primary:hover {
-            background: #3182ce;
-            transform: translateY(-3px);
-            box-shadow: 0 12px 35px rgba(66, 153, 225, 0.4);
-        }
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(37,99,235,0.3);
+}
 
-        /* Sections */
-        .section {
-            padding: 4rem 0;
-        }
+/* Hero */
+.hero {
+    padding: 160px 8% 100px;
+    max-width: 1200px;
+    margin: auto;
+    animation: fadeUp 1.2s ease forwards;
+}
 
-        .section h2 {
-            font-size: clamp(2rem, 5vw, 2.75rem);
-            font-weight: 700;
-            text-align: center;
-            color: #2d3748;
-            margin-bottom: 3.5rem;
-            position: relative;
-        }
+.hero h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    max-width: 800px;
+}
 
-        .section h2::after {
-            content: '';
-            position: absolute;
-            bottom: -12px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 3px;
-            background: #4299e1;
-            border-radius: 2px;
-        }
+.hero h1 span {
+    color: #2563eb;
+}
 
-        /* Cards Grid */
-        .cards-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
+.hero p {
+    font-size: 18px;
+    color: #475569;
+    max-width: 650px;
+}
 
-        .card {
-            background: white;
-            padding: 2.5rem 2rem;
-            border-radius: 24px;
-            box-shadow: 0 5px 25px rgba(0,0,0,0.06);
-            border: 1px solid #f7fafc;
-            transition: all 0.3s ease;
-            position: relative;
-            cursor: pointer;
-            overflow: hidden;
-        }
+.hero .btn {
+    margin-top: 35px;
+}
 
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 25px 60px rgba(0,0,0,0.12);
-            border-color: #e2e8f0;
-        }
+/* Sections */
+section {
+    padding: 100px 8%;
+    max-width: 1200px;
+    margin: auto;
+}
 
-        .card-header {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-        }
+section h2 {
+    font-size: 32px;
+    margin-bottom: 60px;
+    text-align: center;
+}
 
-        .icon {
-            width: 56px;
-            height: 56px;
-            border-radius: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.4rem;
-            font-weight: 600;
-            color: white;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    gap: 30px;
+}
 
-        .icon-web { background: #4299e1; }
-        .icon-bill { background: #48bb78; }
-        .icon-trust { background: #ed8936; }
-        .icon-shop { background: #805ad5; }
+.card {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+    transition: all 0.4s ease;
+    transform: translateY(40px);
+    opacity: 0;
+}
 
-        .card h3 {
-            font-size: 1.35rem;
-            font-weight: 700;
-            color: #2d3748;
-            margin-bottom: 1rem;
-        }
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.1);
+}
 
-        .card ul {
-            list-style: none;
-            color: #4a5568;
-        }
+.card svg {
+    width: 45px;
+    margin-bottom: 20px;
+    color: #2563eb;
+}
 
-        .card li {
-            padding: 0.75rem 0;
-            padding-left: 1.75rem;
-            position: relative;
-            font-size: 1.05rem;
-            line-height: 1.5;
-        }
+/* About */
+.about-box {
+    background: white;
+    padding: 60px;
+    border-radius: 25px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.05);
+    text-align: center;
+    font-size: 18px;
+}
 
-        .card li::before {
-            content: '→';
-            position: absolute;
-            left: 0;
-            color: #48bb78;
-            font-weight: 800;
-            font-size: 1.1rem;
-        }
+/* Floating WhatsApp */
+.whatsapp {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: #25D366;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 26px;
+    color: white;
+    text-decoration: none;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
 
-        /* About */
-        .about {
-            background: white;
-            border-radius: 24px;
-            padding: 4rem 3rem;
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
-        }
+.whatsapp:hover {
+    transform: scale(1.1);
+}
 
-        .about p {
-            font-size: 1.25rem;
-            color: #4a5568;
-            margin-bottom: 2.5rem;
-            line-height: 1.8;
-        }
+/* Footer */
+footer {
+    text-align: center;
+    padding: 80px 20px;
+    color: #64748b;
+    font-size: 14px;
+}
 
-        .cta-secondary {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.75rem;
-            padding: 1.1rem 2.5rem;
-            background: #48bb78;
-            color: white;
-            text-decoration: none;
-            font-weight: 600;
-            border-radius: 16px;
-            font-size: 1.1rem;
-            box-shadow: 0 4px 20px rgba(72, 187, 120, 0.3);
-            transition: all 0.25s ease;
-        }
+/* Animation */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
-        .cta-secondary:hover {
-            background: #38a169;
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(72, 187, 120, 0.4);
-        }
+/* Scroll reveal */
+.show {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    transition: 1s ease;
+}
 
-        /* Footer */
-        footer {
-            background: #f7fafc;
-            padding: 3rem 0 2rem;
-            text-align: center;
-            color: #718096;
-            border-top: 1px solid #e2e8f0;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .container { padding: 0 1.25rem; }
-            .hero { padding: 3rem 0 2rem; }
-            .section { padding: 3rem 0; }
-            .card { padding: 2rem 1.5rem; }
-            .about { padding: 2.5rem 2rem; margin: 0 1rem; }
-        }
-
-        @media (max-width: 480px) {
-            .cta-primary, .cta-secondary {
-                padding: 1rem 2rem;
-                font-size: 1rem;
-                width: 100%;
-                justify-content: center;
-            }
-        }
-
-        /* Micro-scroll animation */
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-5px); }
-        }
-
-        .card:nth-child(1):hover { animation: float 1s ease-in-out; }
-        .card:nth-child(2):hover { animation: float 1s 0.1s ease-in-out; }
-        .card:nth-child(3):hover { animation: float 1s 0.2s ease-in-out; }
-    </style>
+/* Responsive */
+@media(max-width:768px){
+    .hero h1 {
+        font-size: 34px;
+    }
+}
+</style>
 </head>
+
 <body>
-    <div class="container">
-        <section class="hero">
-            <h1>SixForce Technologies</h1>
-            <p class="hero-subtitle">
-                Affordable Websites, Web Applications & Billing Software for Growing Businesses
-            </p>
-            <a href="https://wa.me/919944226038" class="cta-primary" target="_blank">
-                📱 Get Free Consultation
-            </a>
-        </section>
 
-        <section class="section">
-            <h2>What We Build</h2>
-            <div class="cards-grid">
-                <div class="card">
-                    <div class="card-header">
-                        <div class="icon icon-web">🌐</div>
-                        <h3>Web Solutions</h3>
-                    </div>
-                    <ul>
-                        <li>Business Websites</li>
-                        <li>Admin Panels & Dashboards</li>
-                        <li>Custom Web Applications</li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <div class="card-header">
-                        <div class="icon icon-bill">💰</div>
-                        <h3>Billing Systems</h3>
-                    </div>
-                    <ul>
-                        <li>Billing Software for Shops</li>
-                        <li>Inventory Management</li>
-                        <li>Payment Integration</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+<header>
+    <div class="logo"><span>SixForce</span> Technologies</div>
+    <a href="https://wa.me/919944226038" class="btn">Let’s Talk</a>
+</header>
 
-        <section class="section">
-            <h2>Why Choose Us</h2>
-            <div class="cards-grid">
-                <div class="card">
-                    <div class="card-header">
-                        <div class="icon icon-trust">✅</div>
-                        <h3>Trusted Service</h3>
-                    </div>
-                    <ul>
-                        <li>Affordable Pricing</li>
-                        <li>Fast Delivery</li>
-                        <li>No Hidden Costs</li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <div class="card-header">
-                        <div class="icon icon-shop">🗣️</div>
-                        <h3>Personal Support</h3>
-                    </div>
-                    <ul>
-                        <li>Tamil & English Support</li>
-                        <li>Direct Developer Contact</li>
-                        <li>Lifetime Assistance</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+<div class="hero">
+    <h1>Premium <span>Websites & Business Software</span> That Elevate Your Brand</h1>
+    <p>
+        We design high-performance websites and intelligent billing systems
+        crafted to help businesses operate smarter and grow faster.
+    </p>
+    <a href="https://wa.me/919944226038" class="btn">Request Free Consultation</a>
+</div>
 
-        <section class="section">
-            <h2>Perfect For</h2>
-            <div class="cards-grid">
-                <div class="card">
-                    <div class="card-header">
-                        <div class="icon icon-web">🏥</div>
-                        <h3>Healthcare</h3>
-                    </div>
-                    <ul>
-                        <li>Medical Shops</li>
-                        <li>Clinics & Hospitals</li>
-                        <li>Pharmacies</li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <div class="card-header">
-                        <div class="icon icon-bill">🏪</div>
-                        <h3>Businesses</h3>
-                    </div>
-                    <ul>
-                        <li>Retail Stores</li>
-                        <li>Schools & Education</li>
-                        <li>SMEs</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+<section>
+    <h2>Our Expertise</h2>
+    <div class="grid">
 
-        <section class="section">
-            <div class="about">
-                <h2>About SixForce</h2>
-                <p>
-                    Founded by Premraj in Chennai, SixForce Technologies builds modern, 
-                    reliable software that helps Tamil Nadu businesses grow efficiently. 
-                    Direct developer communication, fast delivery, and affordable pricing.
-                </p>
-                <a href="tel:+919944226038" class="cta-secondary">
-                    📞 Call Now: +91 99442 26038
-                </a>
-            </div>
-        </section>
-    </div>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 SixForce Technologies | Chennai, Tamil Nadu, India</p>
+        <div class="card reveal">
+            <svg fill="currentColor" viewBox="0 0 24 24"><path d="M4 4h16v12H4z"/><path d="M2 18h20v2H2z"/></svg>
+            <h3>Professional Business Websites</h3>
+            <p>Modern, responsive websites designed to convert visitors into customers.</p>
         </div>
-    </footer>
+
+        <div class="card reveal">
+            <svg fill="currentColor" viewBox="0 0 24 24"><path d="M3 3h18v4H3z"/><path d="M3 9h18v12H3z"/></svg>
+            <h3>Retail & Medical Billing Software</h3>
+            <p>Simple, efficient billing systems tailored for growing businesses.</p>
+        </div>
+
+        <div class="card reveal">
+            <svg fill="currentColor" viewBox="0 0 24 24"><path d="M5 3h14v18H5z"/></svg>
+            <h3>Custom Web Applications</h3>
+            <p>Powerful admin panels and workflow automation solutions.</p>
+        </div>
+
+    </div>
+</section>
+
+<section>
+    <h2>About SixForce</h2>
+    <div class="about-box reveal">
+        Founded by <strong>Premraj</strong>, SixForce Technologies delivers premium digital
+        solutions for ambitious businesses across Tamil Nadu.
+    </div>
+</section>
+
+<footer>
+© 2026 SixForce Technologies | Tamil Nadu, India
+</footer>
+
+<a href="https://wa.me/919944226038" class="whatsapp">💬</a>
+
+<script>
+const reveals = document.querySelectorAll('.reveal');
+
+window.addEventListener('scroll', () => {
+    reveals.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        if(top < window.innerHeight - 100){
+            el.classList.add('show');
+        }
+    });
+});
+</script>
+
 </body>
 </html>
