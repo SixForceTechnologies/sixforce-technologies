@@ -3,7 +3,7 @@
 <head>
     <title>SixForce Technologies | Websites & Billing Software</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Affordable websites, web applications & billing software for growing businesses in Tamil Nadu. Fast delivery with Tamil & English support.">
+    <meta name="description" content="Affordable websites, web apps & billing software for Tamil Nadu businesses. Fast delivery with direct developer support.">
     <style>
         * {
             margin: 0;
@@ -12,236 +12,257 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', system-ui, sans-serif;
             line-height: 1.7;
-            color: #334155;
-            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-            min-height: 100vh;
+            color: #2d3748;
+            background: #fafbfc;
+            overflow-x: hidden;
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 0 auto;
-            padding: 2rem 1rem;
+            padding: 0 1.5rem;
         }
 
+        /* Header/Hero */
         .hero {
             text-align: center;
-            padding: 4rem 0;
+            padding: 5rem 0 3rem;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: #4299e1;
         }
 
         .hero h1 {
-            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-size: clamp(2.8rem, 7vw, 4.5rem);
             font-weight: 800;
-            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 1.5rem;
-            letter-spacing: -0.02em;
+            color: #2d3748;
+            margin-bottom: 1rem;
+            letter-spacing: -0.025em;
         }
 
         .hero-subtitle {
-            font-size: clamp(1.1rem, 3vw, 1.3rem);
-            max-width: 600px;
-            margin: 0 auto 2.5rem;
-            color: #64748b;
+            font-size: clamp(1.15rem, 3vw, 1.35rem);
+            color: #718096;
+            max-width: 650px;
+            margin: 0 auto 3rem;
+            font-weight: 400;
         }
 
-        .cta-button {
-            display: inline-block;
-            padding: 1rem 2.5rem;
-            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+        .cta-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1.25rem 2.75rem;
+            background: #4299e1;
             color: white;
             text-decoration: none;
             font-weight: 600;
             font-size: 1.1rem;
-            border-radius: 12px;
-            box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(66, 153, 225, 0.3);
+            transition: all 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
             position: relative;
             overflow: hidden;
         }
 
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.4);
+        .cta-primary:hover {
+            background: #3182ce;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(66, 153, 225, 0.4);
         }
 
-        .cta-button::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-            transition: left 0.5s;
-        }
-
-        .cta-button:hover::before {
-            left: 100%;
-        }
-
+        /* Sections */
         .section {
-            margin: 5rem 0;
+            padding: 4rem 0;
         }
 
         .section h2 {
-            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            font-size: clamp(2rem, 5vw, 2.75rem);
             font-weight: 700;
-            color: #1e293b;
-            margin-bottom: 2.5rem;
             text-align: center;
+            color: #2d3748;
+            margin-bottom: 3.5rem;
+            position: relative;
         }
 
-        .features-grid {
+        .section h2::after {
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: #4299e1;
+            border-radius: 2px;
+        }
+
+        /* Cards Grid */
+        .cards-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
-            margin-top: 3rem;
+            margin-top: 2rem;
         }
 
-        .feature-card {
+        .card {
             background: white;
             padding: 2.5rem 2rem;
-            border-radius: 20px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
-            border: 1px solid rgba(148, 163, 184, 0.1);
+            border-radius: 24px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.06);
+            border: 1px solid #f7fafc;
             transition: all 0.3s ease;
             position: relative;
+            cursor: pointer;
             overflow: hidden;
         }
 
-        .feature-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, #3b82f6, #10b981, #f59e0b);
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 60px rgba(0,0,0,0.12);
+            border-color: #e2e8f0;
         }
 
-        .feature-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
         }
 
-        .feature-icon {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+        .icon {
+            width: 56px;
+            height: 56px;
             border-radius: 16px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 1.5rem;
-            font-size: 1.5rem;
-            font-weight: bold;
+            font-size: 1.4rem;
+            font-weight: 600;
             color: white;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
 
-        .feature-list {
+        .icon-web { background: #4299e1; }
+        .icon-bill { background: #48bb78; }
+        .icon-trust { background: #ed8936; }
+        .icon-shop { background: #805ad5; }
+
+        .card h3 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #2d3748;
+            margin-bottom: 1rem;
+        }
+
+        .card ul {
             list-style: none;
-            text-align: left;
+            color: #4a5568;
         }
 
-        .feature-list li {
+        .card li {
             padding: 0.75rem 0;
-            padding-left: 2rem;
+            padding-left: 1.75rem;
             position: relative;
-            font-size: 1.1rem;
-            color: #475569;
+            font-size: 1.05rem;
+            line-height: 1.5;
         }
 
-        .feature-list li::before {
-            content: '✓';
+        .card li::before {
+            content: '→';
             position: absolute;
             left: 0;
-            color: #10b981;
-            font-weight: bold;
-            font-size: 1.2rem;
+            color: #48bb78;
+            font-weight: 800;
+            font-size: 1.1rem;
         }
 
-        .about-section {
-            max-width: 700px;
-            margin: 0 auto;
+        /* About */
+        .about {
+            background: white;
+            border-radius: 24px;
+            padding: 4rem 3rem;
             text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
         }
 
-        .about-section p {
-            font-size: 1.2rem;
-            color: #64748b;
+        .about p {
+            font-size: 1.25rem;
+            color: #4a5568;
             margin-bottom: 2.5rem;
+            line-height: 1.8;
         }
 
-        .phone-cta {
-            display: inline-block;
-            padding: 1rem 2rem;
-            background: #10b981;
+        .cta-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1.1rem 2.5rem;
+            background: #48bb78;
             color: white;
             text-decoration: none;
             font-weight: 600;
-            border-radius: 12px;
+            border-radius: 16px;
             font-size: 1.1rem;
-            box-shadow: 0 8px 25px rgba(16, 185, 129, 0.3);
-            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(72, 187, 120, 0.3);
+            transition: all 0.25s ease;
         }
 
-        .phone-cta:hover {
-            background: #059669;
+        .cta-secondary:hover {
+            background: #38a169;
             transform: translateY(-2px);
-            box-shadow: 0 15px 35px rgba(16, 185, 129, 0.4);
+            box-shadow: 0 10px 30px rgba(72, 187, 120, 0.4);
         }
 
+        /* Footer */
         footer {
-            background: #f1f5f9;
-            padding: 2.5rem 1rem;
+            background: #f7fafc;
+            padding: 3rem 0 2rem;
             text-align: center;
-            color: #64748b;
-            font-size: 0.95rem;
+            color: #718096;
             border-top: 1px solid #e2e8f0;
-            margin-top: 4rem;
         }
 
-        /* Mobile Optimizations */
-        @media (max-width: 640px) {
-            .container {
-                padding: 1.5rem 1rem;
-            }
-            
-            .hero {
-                padding: 2.5rem 0;
-            }
-            
-            .features-grid {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-            
-            .feature-card {
-                padding: 2rem 1.5rem;
-            }
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container { padding: 0 1.25rem; }
+            .hero { padding: 3rem 0 2rem; }
+            .section { padding: 3rem 0; }
+            .card { padding: 2rem 1.5rem; }
+            .about { padding: 2.5rem 2rem; margin: 0 1rem; }
         }
 
         @media (max-width: 480px) {
-            .hero h1 {
-                margin-bottom: 1rem;
-            }
-            
-            .cta-button, .phone-cta {
-                padding: 0.9rem 2rem;
+            .cta-primary, .cta-secondary {
+                padding: 1rem 2rem;
                 font-size: 1rem;
+                width: 100%;
+                justify-content: center;
             }
         }
 
-        /* Tablet */
-        @media (min-width: 641px) and (max-width: 1024px) {
-            .features-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
+        /* Micro-scroll animation */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-5px); }
         }
+
+        .card:nth-child(1):hover { animation: float 1s ease-in-out; }
+        .card:nth-child(2):hover { animation: float 1s 0.1s ease-in-out; }
+        .card:nth-child(3):hover { animation: float 1s 0.2s ease-in-out; }
     </style>
 </head>
 <body>
@@ -251,25 +272,31 @@
             <p class="hero-subtitle">
                 Affordable Websites, Web Applications & Billing Software for Growing Businesses
             </p>
-            <a href="https://wa.me/919944226038" class="cta-button" target="_blank">
-                Get Free Consultation
+            <a href="https://wa.me/919944226038" class="cta-primary" target="_blank">
+                📱 Get Free Consultation
             </a>
         </section>
 
         <section class="section">
             <h2>What We Build</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🌐</div>
-                    <ul class="feature-list">
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="icon icon-web">🌐</div>
+                        <h3>Web Solutions</h3>
+                    </div>
+                    <ul>
                         <li>Business Websites</li>
                         <li>Admin Panels & Dashboards</li>
                         <li>Custom Web Applications</li>
                     </ul>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">💰</div>
-                    <ul class="feature-list">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="icon icon-bill">💰</div>
+                        <h3>Billing Systems</h3>
+                    </div>
+                    <ul>
                         <li>Billing Software for Shops</li>
                         <li>Inventory Management</li>
                         <li>Payment Integration</li>
@@ -279,22 +306,28 @@
         </section>
 
         <section class="section">
-            <h2>Why Businesses Choose Us</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">💸</div>
-                    <ul class="feature-list">
+            <h2>Why Choose Us</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="icon icon-trust">✅</div>
+                        <h3>Trusted Service</h3>
+                    </div>
+                    <ul>
                         <li>Affordable Pricing</li>
                         <li>Fast Delivery</li>
                         <li>No Hidden Costs</li>
                     </ul>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🗣️</div>
-                    <ul class="feature-list">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="icon icon-shop">🗣️</div>
+                        <h3>Personal Support</h3>
+                    </div>
+                    <ul>
                         <li>Tamil & English Support</li>
-                        <li>Direct Developer Communication</li>
-                        <li>Lifetime Support</li>
+                        <li>Direct Developer Contact</li>
+                        <li>Lifetime Assistance</li>
                     </ul>
                 </div>
             </div>
@@ -302,42 +335,51 @@
 
         <section class="section">
             <h2>Perfect For</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🏥</div>
-                    <ul class="feature-list">
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="icon icon-web">🏥</div>
+                        <h3>Healthcare</h3>
+                    </div>
+                    <ul>
                         <li>Medical Shops</li>
                         <li>Clinics & Hospitals</li>
                         <li>Pharmacies</li>
                     </ul>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🏪</div>
-                    <ul class="feature-list">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="icon icon-bill">🏪</div>
+                        <h3>Businesses</h3>
+                    </div>
+                    <ul>
                         <li>Retail Stores</li>
                         <li>Schools & Education</li>
-                        <li>Small & Medium Businesses</li>
+                        <li>SMEs</li>
                     </ul>
                 </div>
             </div>
         </section>
 
         <section class="section">
-            <div class="about-section">
-                <h2>About</h2>
+            <div class="about">
+                <h2>About SixForce</h2>
                 <p>
-                    Founded by Premraj, SixForce Technologies helps businesses build modern, 
-                    reliable and easy-to-use software solutions that improve growth and efficiency.
+                    Founded by Premraj in Chennai, SixForce Technologies builds modern, 
+                    reliable software that helps Tamil Nadu businesses grow efficiently. 
+                    Direct developer communication, fast delivery, and affordable pricing.
                 </p>
-                <a href="tel:+919944226038" class="phone-cta">
-                    Call Now: +91 99442 26038
+                <a href="tel:+919944226038" class="cta-secondary">
+                    📞 Call Now: +91 99442 26038
                 </a>
             </div>
         </section>
     </div>
 
     <footer>
-        <p>© 2026 SixForce Technologies | Chennai, Tamil Nadu, India</p>
+        <div class="container">
+            <p>&copy; 2026 SixForce Technologies | Chennai, Tamil Nadu, India</p>
+        </div>
     </footer>
 </body>
 </html>
