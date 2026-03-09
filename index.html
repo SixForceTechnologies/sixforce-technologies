@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>SixForce Technologies | Websites, Apps & Billing Software</title>
+  <title>SixForce Technologies | Websites, Apps &amp; Billing Software</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
   <style>
@@ -13,118 +13,43 @@
       --mist: #f0f6ff;
       --slate: #64748b;
       --white: #ffffff;
-      --accent: #f59e0b;
       --radius: 14px;
     }
-
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     body { font-family: 'DM Sans', sans-serif; background: var(--white); color: var(--ink); overflow-x: hidden; }
 
     /* NAV */
-    nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      display: flex; justify-content: space-between; align-items: center;
-      padding: 18px 6%;
-      background: rgba(255,255,255,0.85);
-      backdrop-filter: blur(16px);
-      border-bottom: 1px solid rgba(14,165,233,0.1);
-      transition: box-shadow 0.3s;
-    }
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 18px 6%; background: rgba(255,255,255,0.85); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(14,165,233,0.1); transition: box-shadow 0.3s; }
     nav.scrolled { box-shadow: 0 4px 30px rgba(0,0,0,0.08); }
-    .logo { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--ink); letter-spacing: -0.3px; }
+    .logo { font-family: 'DM Serif Display', serif; font-size: clamp(16px, 3.5vw, 22px); color: var(--ink); letter-spacing: -0.3px; }
     .logo span { color: var(--sky); }
-    .nav-cta {
-      display: inline-flex; align-items: center; gap: 8px;
-      padding: 10px 22px; background: var(--ink); color: white;
-      text-decoration: none; border-radius: 50px; font-size: 14px;
-      font-weight: 500; transition: background 0.25s, transform 0.2s;
-    }
+    .nav-cta { display: inline-flex; align-items: center; gap: 8px; padding: 10px 22px; background: var(--ink); color: white; text-decoration: none; border-radius: 50px; font-size: 14px; font-weight: 500; transition: background 0.25s, transform 0.2s; }
     .nav-cta:hover { background: var(--sky-dark); transform: translateY(-1px); }
 
     /* HERO */
-    .hero {
-      min-height: 100vh; display: flex; flex-direction: column;
-      justify-content: center; padding: 120px 6% 80px;
-      position: relative; overflow: hidden;
-    }
-    .hero-bg {
-      position: absolute; inset: 0;
-      background:
-        radial-gradient(ellipse 70% 60% at 80% 40%, rgba(14,165,233,0.12) 0%, transparent 60%),
-        radial-gradient(ellipse 50% 50% at 10% 90%, rgba(245,158,11,0.07) 0%, transparent 55%);
-      z-index: 0;
-    }
-    .hero-grid {
-      position: absolute; inset: 0;
-      background-image:
-        linear-gradient(rgba(14,165,233,0.05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(14,165,233,0.05) 1px, transparent 1px);
-      background-size: 60px 60px;
-      mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 40%, transparent 100%);
-      z-index: 0;
-    }
+    .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 120px 6% 80px; position: relative; overflow: hidden; }
+    .hero-bg { position: absolute; inset: 0; background: radial-gradient(ellipse 70% 60% at 80% 40%, rgba(14,165,233,0.12) 0%, transparent 60%), radial-gradient(ellipse 50% 50% at 10% 90%, rgba(245,158,11,0.07) 0%, transparent 55%); z-index: 0; }
+    .hero-grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(14,165,233,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(14,165,233,0.05) 1px, transparent 1px); background-size: 60px 60px; mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 40%, transparent 100%); z-index: 0; }
     .hero-content { position: relative; z-index: 1; max-width: 780px; }
-    .hero-badge {
-      display: inline-flex; align-items: center; gap: 8px;
-      padding: 6px 16px; background: rgba(14,165,233,0.1);
-      border: 1px solid rgba(14,165,233,0.25); border-radius: 50px;
-      font-size: 13px; font-weight: 500; color: var(--sky-dark); margin-bottom: 28px;
-    }
-    .hero-badge::before {
-      content: ''; width: 7px; height: 7px; border-radius: 50%;
-      background: var(--sky); animation: pulse 2s infinite;
-    }
+    .hero-badge { display: inline-flex; align-items: center; gap: 8px; padding: 6px 16px; background: rgba(14,165,233,0.1); border: 1px solid rgba(14,165,233,0.25); border-radius: 50px; font-size: 13px; font-weight: 500; color: var(--sky-dark); margin-bottom: 28px; }
+    .hero-badge::before { content: ''; width: 7px; height: 7px; border-radius: 50%; background: var(--sky); animation: pulse 2s infinite; }
     @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(1.3)} }
-
-    h1 {
-      font-family: 'DM Serif Display', serif;
-      font-size: clamp(38px, 6vw, 70px);
-      line-height: 1.08; letter-spacing: -1.5px; margin-bottom: 24px;
-    }
+    h1 { font-family: 'DM Serif Display', serif; font-size: clamp(38px, 6vw, 70px); line-height: 1.08; letter-spacing: -1.5px; margin-bottom: 24px; }
     h1 em { font-style: italic; color: var(--sky); }
-
-    .hero-sub {
-      font-size: 18px; color: var(--slate); max-width: 520px;
-      line-height: 1.7; font-weight: 300; margin-bottom: 40px;
-    }
+    .hero-sub { font-size: 18px; color: var(--slate); max-width: 520px; line-height: 1.7; font-weight: 300; margin-bottom: 40px; }
     .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
-
-    .btn-primary {
-      display: inline-flex; align-items: center; gap: 10px;
-      padding: 15px 30px; background: var(--sky); color: white;
-      text-decoration: none; border-radius: 50px; font-weight: 600;
-      font-size: 15px; transition: all 0.25s;
-      box-shadow: 0 8px 25px rgba(14,165,233,0.3);
-      position: relative; overflow: hidden;
-    }
-    .btn-primary::before {
-      content: ''; position: absolute; inset: 0;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.18), transparent);
-      transform: translateX(-100%); transition: transform 0.5s;
-    }
+    .btn-primary { display: inline-flex; align-items: center; gap: 10px; padding: 15px 30px; background: var(--sky); color: white; text-decoration: none; border-radius: 50px; font-weight: 600; font-size: 15px; transition: all 0.25s; box-shadow: 0 8px 25px rgba(14,165,233,0.3); position: relative; overflow: hidden; }
+    .btn-primary::before { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.18), transparent); transform: translateX(-100%); transition: transform 0.5s; }
     .btn-primary:hover::before { transform: translateX(100%); }
     .btn-primary:hover { background: var(--sky-dark); transform: translateY(-2px); box-shadow: 0 12px 35px rgba(14,165,233,0.4); }
-
-    .btn-secondary {
-      display: inline-flex; align-items: center; gap: 8px;
-      padding: 15px 28px; background: transparent; color: var(--ink);
-      text-decoration: none; border-radius: 50px; font-weight: 500;
-      font-size: 15px; border: 1.5px solid rgba(11,15,26,0.18); transition: all 0.25s;
-    }
+    .btn-secondary { display: inline-flex; align-items: center; gap: 8px; padding: 15px 28px; background: transparent; color: var(--ink); text-decoration: none; border-radius: 50px; font-weight: 500; font-size: 15px; border: 1.5px solid rgba(11,15,26,0.18); transition: all 0.25s; }
     .btn-secondary:hover { border-color: var(--sky); color: var(--sky); }
 
-    /* Hero mockup */
-    .hero-visual {
-      position: absolute; right: 5%; top: 50%; transform: translateY(-50%);
-      width: 340px; animation: float 4s ease-in-out infinite; z-index: 1; display: none;
-    }
+    .hero-visual { position: absolute; right: 5%; top: 50%; transform: translateY(-50%); width: 340px; animation: float 4s ease-in-out infinite; z-index: 1; display: none; }
     @media (min-width: 1024px) { .hero-visual { display: block; } }
     @keyframes float { 0%,100%{transform:translateY(-50%) translateY(0)} 50%{transform:translateY(-50%) translateY(-16px)} }
-    .mockup-card {
-      background: white; border-radius: 20px; padding: 28px;
-      box-shadow: 0 30px 80px rgba(0,0,0,0.12), 0 0 0 1px rgba(0,0,0,0.05);
-    }
+    .mockup-card { background: white; border-radius: 20px; padding: 28px; box-shadow: 0 30px 80px rgba(0,0,0,0.12), 0 0 0 1px rgba(0,0,0,0.05); }
     .mockup-header { display: flex; align-items: center; gap: 10px; margin-bottom: 20px; }
     .mockup-dot { width: 10px; height: 10px; border-radius: 50%; }
     .mockup-dot:nth-child(1){background:#ff5f57} .mockup-dot:nth-child(2){background:#febc2e} .mockup-dot:nth-child(3){background:#28c840}
@@ -144,35 +69,17 @@
 
     /* SECTIONS */
     .section { padding: 100px 6%; max-width: 1280px; margin: auto; }
-    .section-tag {
-      display: inline-block; font-size: 12px; font-weight: 600;
-      letter-spacing: 2px; text-transform: uppercase; color: var(--sky); margin-bottom: 14px;
-    }
-    h2 {
-      font-family: 'DM Serif Display', serif; font-size: clamp(28px, 4vw, 46px);
-      line-height: 1.15; letter-spacing: -0.8px; margin-bottom: 16px;
-    }
+    .section-tag { display: inline-block; font-size: 12px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--sky); margin-bottom: 14px; }
+    h2 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 4vw, 46px); line-height: 1.15; letter-spacing: -0.8px; margin-bottom: 16px; }
     .section-sub { font-size: 17px; color: var(--slate); max-width: 500px; font-weight: 300; line-height: 1.7; margin-bottom: 56px; }
 
     /* SERVICES */
     .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
-    .service-card {
-      background: white; border-radius: var(--radius); padding: 36px;
-      border: 1px solid rgba(0,0,0,0.07); transition: all 0.3s;
-      position: relative; overflow: hidden;
-    }
-    .service-card::before {
-      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
-      background: linear-gradient(90deg, var(--sky), #38bdf8);
-      transform: scaleX(0); transform-origin: left; transition: transform 0.35s ease;
-    }
+    .service-card { background: white; border-radius: var(--radius); padding: 36px; border: 1px solid rgba(0,0,0,0.07); transition: all 0.3s; position: relative; overflow: hidden; }
+    .service-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--sky), #38bdf8); transform: scaleX(0); transform-origin: left; transition: transform 0.35s ease; }
     .service-card:hover { transform: translateY(-5px); box-shadow: 0 20px 50px rgba(0,0,0,0.09); }
     .service-card:hover::before { transform: scaleX(1); }
-    .service-icon {
-      width: 64px; height: 64px; border-radius: 18px;
-      display: flex; align-items: center; justify-content: center;
-      margin-bottom: 22px; transition: transform 0.3s;
-    }
+    .service-icon { width: 64px; height: 64px; border-radius: 18px; display: flex; align-items: center; justify-content: center; margin-bottom: 22px; transition: transform 0.3s; }
     .service-card:hover .service-icon { transform: translateY(-4px) scale(1.06); }
     .service-icon svg { width: 34px; height: 34px; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.18)); }
     .service-card h3 { font-size: 20px; font-weight: 600; margin-bottom: 12px; }
@@ -184,17 +91,9 @@
     .why-section .section-tag { color: #38bdf8; }
     .why-section h2 { color: white; }
     .why-section .section-sub { color: rgba(255,255,255,0.5); }
-    .why-grid {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 2px; background: rgba(255,255,255,0.06);
-      border-radius: var(--radius); overflow: hidden;
-    }
+    .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 2px; background: rgba(255,255,255,0.06); border-radius: var(--radius); overflow: hidden; }
     .why-item { padding: 36px; background: #0f1623; transition: background 0.3s; position: relative; }
-    .why-item::after {
-      content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px;
-      background: linear-gradient(90deg, var(--sky), transparent);
-      transform: scaleX(0); transform-origin: left; transition: transform 0.4s;
-    }
+    .why-item::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--sky), transparent); transform: scaleX(0); transform-origin: left; transition: transform 0.4s; }
     .why-item:hover { background: #131d2e; }
     .why-item:hover::after { transform: scaleX(1); }
     .why-num { font-family: 'DM Serif Display', serif; font-size: 40px; color: var(--sky); line-height: 1; margin-bottom: 12px; opacity: 0.4; transition: opacity 0.3s; }
@@ -205,27 +104,50 @@
     /* PROCESS */
     .process-section { padding: 100px 6%; max-width: 1280px; margin: auto; }
     .process-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; position: relative; }
-    .process-steps::before {
-      content: ''; position: absolute; top: 29px; left: 80px; right: 80px; height: 1px;
-      background: linear-gradient(90deg, var(--sky), rgba(14,165,233,0.1));
-    }
+    .process-steps::before { content: ''; position: absolute; top: 29px; left: 80px; right: 80px; height: 1px; background: linear-gradient(90deg, var(--sky), rgba(14,165,233,0.1)); }
     @media (max-width: 768px) { .process-steps::before { display: none; } }
     .step { text-align: center; }
-    .step-num {
-      width: 60px; height: 60px; border-radius: 50%; background: white;
-      border: 2px solid var(--sky); display: flex; align-items: center; justify-content: center;
-      margin: 0 auto 20px; font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--sky);
-      box-shadow: 0 0 0 6px rgba(14,165,233,0.08); transition: all 0.3s; position: relative; z-index: 1;
-    }
+    .step-num { width: 60px; height: 60px; border-radius: 50%; background: white; border: 2px solid var(--sky); display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--sky); box-shadow: 0 0 0 6px rgba(14,165,233,0.08); transition: all 0.3s; position: relative; z-index: 1; }
     .step:hover .step-num { background: var(--sky); color: white; box-shadow: 0 0 0 10px rgba(14,165,233,0.1), 0 14px 30px rgba(14,165,233,0.3); transform: scale(1.1); }
     .step h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; }
     .step p { font-size: 14px; color: var(--slate); line-height: 1.65; font-weight: 300; }
 
+    /* PROJECTS */
+    .projects-section { background: var(--mist); padding: 100px 6%; position: relative; overflow: hidden; }
+    .projects-section::before { content: ''; position: absolute; top: -100px; right: -80px; width: 500px; height: 500px; border-radius: 50%; background: radial-gradient(circle, rgba(14,165,233,0.08) 0%, transparent 70%); pointer-events: none; }
+    .projects-inner { max-width: 1280px; margin: auto; }
+    .projects-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+    @media (max-width: 900px) { .projects-grid { grid-template-columns: 1fr; } }
+    .project-card { background: white; border-radius: 20px; overflow: hidden; border: 1px solid rgba(0,0,0,0.06); box-shadow: 0 4px 24px rgba(0,0,0,0.06); transition: transform 0.4s cubic-bezier(.22,.68,0,1.2), box-shadow 0.4s ease; }
+    .project-card:hover { transform: translateY(-10px) scale(1.01); box-shadow: 0 30px 70px rgba(0,0,0,0.13); }
+    .browser-bar { background: #f1f3f5; padding: 10px 14px; display: flex; align-items: center; gap: 10px; border-bottom: 1px solid rgba(0,0,0,0.07); }
+    .browser-dots { display: flex; gap: 5px; }
+    .browser-dot { width: 10px; height: 10px; border-radius: 50%; }
+    .browser-dot:nth-child(1){background:#ff5f57} .browser-dot:nth-child(2){background:#febc2e} .browser-dot:nth-child(3){background:#28c840}
+    .browser-url { flex: 1; background: white; border-radius: 6px; padding: 4px 12px; font-size: 11px; color: var(--slate); border: 1px solid rgba(0,0,0,0.08); }
+    .project-preview { position: relative; height: 220px; overflow: hidden; }
+    .project-preview-inner { width: 100%; transition: transform 6s cubic-bezier(0.25,0.46,0.45,0.94); }
+    .project-card:hover .project-preview-inner { transform: translateY(-18%); }
+    .live-badge { position: absolute; top: 12px; right: 12px; z-index: 2; display: flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.93); backdrop-filter: blur(8px); border-radius: 30px; padding: 5px 12px; font-size: 11px; font-weight: 600; color: #16a34a; border: 1px solid rgba(34,197,94,0.25); }
+    .live-dot { width: 7px; height: 7px; border-radius: 50%; background: #22c55e; animation: livePing 2s ease infinite; }
+    @keyframes livePing { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.6;transform:scale(1.4)} }
+    .project-info { padding: 26px 28px 28px; }
+    .project-type { font-size: 11px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--sky); margin-bottom: 8px; display: flex; align-items: center; gap: 6px; }
+    .project-info h3 { font-family: 'DM Serif Display', serif; font-size: 24px; letter-spacing: -0.4px; margin-bottom: 10px; color: var(--ink); }
+    .project-info p { font-size: 14px; color: var(--slate); line-height: 1.7; font-weight: 300; margin-bottom: 18px; }
+    .project-tags { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 22px; }
+    .tag { padding: 4px 12px; border-radius: 30px; font-size: 12px; font-weight: 500; background: var(--mist); color: var(--slate); border: 1px solid rgba(14,165,233,0.15); }
+    .project-footer { display: flex; align-items: center; justify-content: space-between; }
+    .project-link { display: inline-flex; align-items: center; gap: 8px; padding: 10px 22px; background: var(--ink); color: white; text-decoration: none; border-radius: 50px; font-size: 13px; font-weight: 600; transition: all 0.25s; }
+    .project-link:hover { background: var(--sky); transform: translateX(3px); }
+    .project-link svg { transition: transform 0.25s; }
+    .project-link:hover svg { transform: translateX(3px); }
+    .project-num { font-family: 'DM Serif Display', serif; font-size: 48px; font-style: italic; color: rgba(14,165,233,0.1); line-height: 1; transition: color 0.3s; }
+    .project-card:hover .project-num { color: rgba(14,165,233,0.22); }
+    .count-pill { display: inline-flex; align-items: center; gap: 8px; padding: 8px 18px; background: var(--sky); color: white; border-radius: 50px; font-size: 13px; font-weight: 600; margin-bottom: 48px; }
+
     /* ABOUT */
-    .about-section {
-      padding: 100px 6%; max-width: 1280px; margin: auto;
-      display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
-    }
+    .about-section { padding: 100px 6%; max-width: 1280px; margin: auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
     @media (max-width: 768px) { .about-section { grid-template-columns: 1fr; gap: 40px; } }
     .about-label { display: inline-block; font-size: 12px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--sky); margin-bottom: 14px; }
     .about-section h2 { margin-bottom: 20px; }
@@ -243,13 +165,7 @@
 
     /* CTA */
     .cta-section { padding: 0 6% 100px; max-width: 1280px; margin: auto; }
-    .cta-banner {
-      background: linear-gradient(135deg, #0b0f1a 0%, #0f1e35 50%, #0369a1 100%);
-      background-size: 200% 200%; animation: gradShift 8s ease infinite;
-      border-radius: 20px; padding: 60px; display: flex;
-      justify-content: space-between; align-items: center;
-      gap: 30px; flex-wrap: wrap; position: relative; overflow: hidden;
-    }
+    .cta-banner { background: linear-gradient(135deg, #0b0f1a 0%, #0f1e35 50%, #0369a1 100%); background-size: 200% 200%; animation: gradShift 8s ease infinite; border-radius: 20px; padding: 60px; display: flex; justify-content: space-between; align-items: center; gap: 30px; flex-wrap: wrap; position: relative; overflow: hidden; }
     @keyframes gradShift { 0%,100%{background-position:0% 50%} 50%{background-position:100% 50%} }
     .cta-banner::before { content: ''; position: absolute; top: -40px; right: -40px; width: 220px; height: 220px; border-radius: 50%; background: rgba(14,165,233,0.15); }
     .cta-banner::after { content: ''; position: absolute; bottom: -60px; left: 30%; width: 180px; height: 180px; border-radius: 50%; background: rgba(255,255,255,0.04); }
@@ -277,11 +193,10 @@
     .footer-links a:hover { color: var(--sky); }
     .footer-bottom { max-width: 1280px; margin: auto; text-align: center; color: rgba(255,255,255,0.22); font-size: 13px; }
 
-    /* REVEAL */
-    .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.6s ease, transform 0.6s ease; }
-    .reveal.visible { opacity: 1; transform: none; }
-
-    @keyframes fadeUp { from{opacity:0;transform:translateY(22px)} to{opacity:1;transform:translateY(0)} }
+    /* REVEAL - visible by default, JS animates */
+    .reveal { opacity: 1; transform: none; transition: opacity 0.65s ease, transform 0.65s ease; }
+    .reveal.ready { opacity: 0; transform: translateY(28px); }
+    .reveal.visible { opacity: 1 !important; transform: none !important; }
 
     @media (max-width: 600px) { .cta-banner { padding: 40px 28px; } h1 { letter-spacing: -1px; } }
   </style>
@@ -295,7 +210,7 @@
 
 <!-- NAV -->
 <nav id="nav">
-  <div class="logo">Six<span>Force</span></div>
+  <div class="logo">Six<span>Force</span> Technologies</div>
   <a href="https://wa.me/919944226038" class="nav-cta">
     <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
     WhatsApp Us
@@ -308,7 +223,7 @@
   <div class="hero-grid"></div>
   <div class="hero-content">
     <div class="hero-badge">Now building Android apps too</div>
-    <h1>Websites & Software<br>Built to <em>grow</em><br>your business</h1>
+    <h1>Websites &amp; Software<br>Built to <em>grow</em><br>your business</h1>
     <p class="hero-sub">We design and develop websites, billing software, and Android apps that help businesses streamline operations and grow faster.</p>
     <div class="hero-actions">
       <a href="https://wa.me/919944226038" class="btn-primary">
@@ -342,22 +257,18 @@
 <!-- MARQUEE -->
 <div class="marquee-strip">
   <div class="marquee-track">
-    <span class="marquee-item"><span class="dot">✦</span> Business Websites</span>
-    <span class="marquee-item"><span class="dot">✦</span> Billing Software</span>
-    <span class="marquee-item"><span class="dot">✦</span> Android Apps</span>
-    <span class="marquee-item"><span class="dot">✦</span> Web Applications</span>
-    <!--<span class="marquee-item"><span class="dot">✦</span> Medical Shops</span>-->
-    <!--<span class="marquee-item"><span class="dot">✦</span> Retail Stores</span>-->
-    <span class="marquee-item"><span class="dot">✦</span> Fast Delivery</span>
-    <span class="marquee-item"><span class="dot">✦</span> Tamil & English Support</span>
-    <span class="marquee-item"><span class="dot">✦</span> Business Websites</span>
-    <span class="marquee-item"><span class="dot">✦</span> Billing Software</span>
-    <span class="marquee-item"><span class="dot">✦</span> Android Apps</span>
-    <span class="marquee-item"><span class="dot">✦</span> Web Applications</span>
-    <!--<span class="marquee-item"><span class="dot">✦</span> Medical Shops</span>-->
-    <!--<span class="marquee-item"><span class="dot">✦</span> Retail Stores</span>-->
-    <span class="marquee-item"><span class="dot">✦</span> Fast Delivery</span>
-    <span class="marquee-item"><span class="dot">✦</span> Tamil & English Support</span>
+    <span class="marquee-item"><span class="dot">&#10022;</span> Business Websites</span>
+    <span class="marquee-item"><span class="dot">&#10022;</span> Billing Software</span>
+    <span class="marquee-item"><span class="dot">&#10022;</span> Android Apps</span>
+    <span class="marquee-item"><span class="dot">&#10022;</span> Web Applications</span>
+    <span class="marquee-item"><span class="dot">&#10022;</span> Fast Delivery</span>
+    <span class="marquee-item"><span class="dot">&#10022;</span> Tamil &amp; English Support</span>
+    <span class="marquee-item"><span class="dot">&#10022;</span> Business Websites</span>
+    <span class="marquee-item"><span class="dot">&#10022;</span> Billing Software</span>
+    <span class="marquee-item"><span class="dot">&#10022;</span> Android Apps</span>
+    <span class="marquee-item"><span class="dot">&#10022;</span> Web Applications</span>
+    <span class="marquee-item"><span class="dot">&#10022;</span> Fast Delivery</span>
+    <span class="marquee-item"><span class="dot">&#10022;</span> Tamil &amp; English Support</span>
   </div>
 </div>
 
@@ -392,7 +303,7 @@
     </div>
     <div class="service-card reveal">
       <div class="service-icon" style="background:linear-gradient(145deg,#ede9fe,#ddd6fe);box-shadow:0 8px 20px rgba(139,92,246,0.25),inset 0 1px 0 rgba(255,255,255,0.8)">
-        <svg viewBox="0 0 24 24" fill="none"><rect x="6" y="3" width="12" height="18" rx="3" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.4"/><rect x="6" y="3" width="12" height="14" rx="2" fill="#ddd6fe" stroke="#7c3aed" stroke-width="1.4"/><circle cx="12" cy="19.5" r="1" fill="#7c3aed" opacity="0.6"/><path d="M9.5 8.5L7.5 6.5M14.5 8.5L16.5 6.5" stroke="#8b5cf6" stroke-width="1.3" stroke-linecap="round"/><path d="M9 11C9 9.343 10.343 8 12 8C13.657 8 15 9.343 15 11V13H9V11Z" fill="#8b5cf6" stroke="#6d28d9" stroke-width="1.2"/><path d="M9 13H15V14C15 14.552 14.552 15 14 15H10C9.448 15 9 14.552 9 14V13Z" fill="#7c3aed" stroke="#6d28d9" stroke-width="1.2"/></svg>
+        <svg viewBox="0 0 24 24" fill="none"><rect x="6" y="3" width="12" height="18" rx="3" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.4"/><rect x="6" y="3" width="12" height="14" rx="2" fill="#ddd6fe" stroke="#7c3aed" stroke-width="1.4"/><circle cx="12" cy="19.5" r="1" fill="#7c3aed" opacity="0.6"/><path d="M9 11C9 9.343 10.343 8 12 8C13.657 8 15 9.343 15 11V13H9V11Z" fill="#8b5cf6" stroke="#6d28d9" stroke-width="1.2"/><path d="M9 13H15V14C15 14.552 14.552 15 14 15H10C9.448 15 9 14.552 9 14V13Z" fill="#7c3aed" stroke="#6d28d9" stroke-width="1.2"/></svg>
       </div>
       <h3>Android App Development</h3>
       <p>Native Android apps for your business — from customer-facing apps to internal tools that keep your team connected and productive.</p>
@@ -409,10 +320,10 @@
       <p class="section-sub">We're not a big agency. We're your dedicated tech team — accessible, honest and fast.</p>
     </div>
     <div class="why-grid reveal">
-      <div class="why-item"><div class="why-num">01</div><h3>Affordable & Transparent</h3><p>No hidden charges. Clear pricing upfront so you always know what you're paying for.</p></div>
+      <div class="why-item"><div class="why-num">01</div><h3>Affordable &amp; Transparent</h3><p>No hidden charges. Clear pricing upfront so you always know what you're paying for.</p></div>
       <div class="why-item"><div class="why-num">02</div><h3>Direct Developer Access</h3><p>Talk directly to the developer building your product — no middlemen, no miscommunication.</p></div>
-      <div class="why-item"><div class="why-num">03</div><h3>Tamil & English Support</h3><p>Comfortable communicating in Tamil? So are we. We make technology feel local.</p></div>
-      <div class="why-item"><div class="why-num">04</div><h3>Fast Delivery & Support</h3><p>Quick turnaround times and ongoing support so your business is never left stuck.</p></div>
+      <div class="why-item"><div class="why-num">03</div><h3>Tamil &amp; English Support</h3><p>Comfortable communicating in Tamil? So are we. We make technology feel local.</p></div>
+      <div class="why-item"><div class="why-num">04</div><h3>Fast Delivery &amp; Support</h3><p>Quick turnaround times and ongoing support so your business is never left stuck.</p></div>
     </div>
   </div>
 </div>
@@ -426,11 +337,143 @@
   </div>
   <div class="process-steps">
     <div class="step reveal"><div class="step-num">1</div><h3>Free Consultation</h3><p>Tell us about your business. We listen, advise, and give you a clear honest plan.</p></div>
-    <div class="step reveal"><div class="step-num">2</div><h3>Design & Approval</h3><p>We show you a design before building anything. You approve, we proceed — no surprises.</p></div>
-    <div class="step reveal"><div class="step-num">3</div><h3>Build & Test</h3><p>Your product is built, tested thoroughly, and refined until it meets your exact needs.</p></div>
-    <div class="step reveal"><div class="step-num">4</div><h3>Launch & Support</h3><p>We go live and stay by your side with ongoing support whenever you need it.</p></div>
+    <div class="step reveal"><div class="step-num">2</div><h3>Design &amp; Approval</h3><p>We show you a design before building anything. You approve, we proceed — no surprises.</p></div>
+    <div class="step reveal"><div class="step-num">3</div><h3>Build &amp; Test</h3><p>Your product is built, tested thoroughly, and refined until it meets your exact needs.</p></div>
+    <div class="step reveal"><div class="step-num">4</div><h3>Launch &amp; Support</h3><p>We go live and stay by your side with ongoing support whenever you need it.</p></div>
   </div>
 </section>
+
+<!-- PROJECTS -->
+<div class="projects-section">
+  <div class="projects-inner">
+    <div class="reveal">
+      <span class="section-tag">Our work</span>
+      <h2>Projects we've<br>built &amp; launched</h2>
+      <p class="section-sub">Real websites for real businesses — live, running, and making an impact every day.</p>
+      <div class="count-pill">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        2 Projects Delivered
+      </div>
+    </div>
+    <div class="projects-grid">
+
+      <!-- Project 1: Samskruthi -->
+      <div class="project-card reveal">
+        <div class="browser-bar">
+          <div class="browser-dots"><div class="browser-dot"></div><div class="browser-dot"></div><div class="browser-dot"></div></div>
+          <div class="browser-url">&#128274; samskruthiplayschools.com</div>
+        </div>
+        <div class="project-preview">
+          <div class="live-badge"><span class="live-dot"></span> Live</div>
+          <div class="project-preview-inner" style="height:320px;background:linear-gradient(160deg,#7c3aed 0%,#4f46e5 45%,#2563eb 100%);padding:16px;display:flex;flex-direction:column;gap:12px;">
+            <div style="background:rgba(255,255,255,0.15);border-radius:8px;padding:8px 14px;display:flex;justify-content:space-between;align-items:center;flex-shrink:0;">
+              <span style="color:white;font-weight:800;font-size:12px;">Samskruthi Play schools</span>
+              <div style="display:flex;gap:10px;"><span style="color:rgba(255,255,255,0.7);font-size:9px;">Courses</span><span style="color:rgba(255,255,255,0.7);font-size:9px;">About</span><span style="color:rgba(255,255,255,0.7);font-size:9px;">Branches</span></div>
+            </div>
+            <div style="flex:1;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:10px;padding:4px;">
+              <div style="color:white;font-size:24px;font-weight:800;line-height:1.2;">Nourishing<br>the Values</div>
+              <div style="color:rgba(255,255,255,0.75);font-size:11px;">Programs for children up to 5.5 years of age</div>
+              <div style="background:#f97316;color:white;font-size:11px;font-weight:700;padding:7px 18px;border-radius:30px;cursor:pointer;">Know More &#8594;</div>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;flex-shrink:0;">
+              <div style="background:rgba(255,255,255,0.15);border-radius:10px;padding:10px 6px;text-align:center;"><div style="font-size:16px;">&#128218;</div><div style="color:white;font-size:9px;font-weight:700;margin-top:4px;">Curriculum</div><div style="color:rgba(255,255,255,0.6);font-size:8px;margin-top:2px;">Value-based</div></div>
+              <div style="background:rgba(255,255,255,0.15);border-radius:10px;padding:10px 6px;text-align:center;"><div style="font-size:16px;">&#127979;</div><div style="color:white;font-size:9px;font-weight:700;margin-top:4px;">Trained Staff</div><div style="color:rgba(255,255,255,0.6);font-size:8px;margin-top:2px;">Montessori</div></div>
+              <div style="background:rgba(255,255,255,0.15);border-radius:10px;padding:10px 6px;text-align:center;"><div style="font-size:16px;">&#127807;</div><div style="color:white;font-size:9px;font-weight:700;margin-top:4px;">Nature</div><div style="color:rgba(255,255,255,0.6);font-size:8px;margin-top:2px;">Cultural roots</div></div>
+            </div>
+          </div>
+        </div>
+        <div class="project-info">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;">
+            <div>
+              <div class="project-type">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="9"/><path d="M12 3c0 0-4 4-4 9s4 9 4 9M12 3c0 0 4 4 4 9s-4 9-4 9M3 12h18"/></svg>
+                Business Website
+              </div>
+              <h3>Samskruthi Play Schools</h3>
+            </div>
+            <div class="project-num">01</div>
+          </div>
+          <p>A full multi-page school website with course listings, branch locator, franchise enquiry, and mobile-first design — built for a growing playschool chain.</p>
+          <div class="project-tags">
+            <span class="tag">Multi-page</span><span class="tag">Responsive</span><span class="tag">SEO Ready</span><span class="tag">Franchise Section</span>
+          </div>
+          <div class="project-footer">
+            <a href="https://www.samskruthiplayschools.com/" target="_blank" class="project-link">
+              Visit Website
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2: Bharatha Bhoomi -->
+      <div class="project-card reveal">
+        <div class="browser-bar">
+          <div class="browser-dots"><div class="browser-dot"></div><div class="browser-dot"></div><div class="browser-dot"></div></div>
+          <div class="browser-url">&#128274; bharathabhoomi.news</div>
+        </div>
+        <div class="project-preview">
+          <div class="live-badge"><span class="live-dot"></span> Live</div>
+          <div class="project-preview-inner" style="height:320px;background:#f8f9fa;display:flex;flex-direction:column;overflow:hidden;">
+            <div style="background:white;border-bottom:1px solid #e5e7eb;padding:7px 12px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0;">
+              <span style="font-weight:900;font-size:12px;color:#1d4ed8;">BHARATHA &#127760; BHOOMI</span>
+              <span style="font-size:8px;color:#6b7280;border:1px solid #e5e7eb;padding:2px 6px;border-radius:4px;">&#127760; மொழி / LANGUAGE</span>
+            </div>
+            <div style="background:white;border-bottom:2px solid #f3f4f6;padding:4px 12px;display:flex;gap:12px;flex-shrink:0;overflow:hidden;">
+              <span style="font-size:8px;font-weight:700;color:#ea580c;border-bottom:2px solid #ea580c;padding-bottom:3px;white-space:nowrap;">ALL NEWS</span>
+              <span style="font-size:8px;color:#374151;white-space:nowrap;">SPORTS</span>
+              <span style="font-size:8px;color:#374151;white-space:nowrap;">POLITICS</span>
+              <span style="font-size:8px;color:#374151;white-space:nowrap;">CINEMA</span>
+              <span style="font-size:8px;color:#374151;white-space:nowrap;">TECHNOLOGY</span>
+            </div>
+            <div style="display:grid;grid-template-columns:2fr 1fr;gap:8px;padding:8px 12px;flex:1;min-height:0;overflow:hidden;">
+              <div style="background:white;border-radius:6px;overflow:hidden;border:1px solid #e5e7eb;display:flex;flex-direction:column;">
+                <div style="height:70px;background:linear-gradient(135deg,#1e3a5f,#1d4ed8);position:relative;display:flex;align-items:flex-end;padding:6px;flex-shrink:0;">
+                  <div style="position:absolute;top:6px;left:6px;background:#dc2626;color:white;font-size:7px;font-weight:800;padding:2px 5px;border-radius:2px;">&#9889; BREAKING</div>
+                  <div style="color:#fb923c;font-weight:700;font-size:9px;line-height:1.3;">AI Continues to Transform Modern Businesses</div>
+                </div>
+                <div style="padding:5px 6px;font-size:7px;color:#6b7280;">&#128197; MAR 05, 2026 &nbsp; &#128193; TECHNOLOGY</div>
+              </div>
+              <div style="display:flex;flex-direction:column;gap:5px;">
+                <div style="background:white;border-radius:5px;padding:5px;border:1px solid #e5e7eb;display:flex;gap:4px;align-items:center;"><div style="width:22px;height:22px;background:#d1fae5;border-radius:3px;flex-shrink:0;"></div><div style="font-size:7px;color:#374151;line-height:1.3;">TN smart city...</div></div>
+                <div style="background:white;border-radius:5px;padding:5px;border:1px solid #e5e7eb;display:flex;gap:4px;align-items:center;"><div style="width:22px;height:22px;background:#dbeafe;border-radius:3px;flex-shrink:0;"></div><div style="font-size:7px;color:#374151;line-height:1.3;">Markets growth...</div></div>
+                <div style="background:white;border-radius:5px;padding:5px;border:1px solid #e5e7eb;display:flex;gap:4px;align-items:center;"><div style="width:22px;height:22px;background:#fef3c7;border-radius:3px;flex-shrink:0;"></div><div style="font-size:7px;color:#374151;line-height:1.3;">Digital infra...</div></div>
+              </div>
+            </div>
+            <div style="padding:6px 12px;background:white;border-top:1px solid #f3f4f6;display:flex;gap:6px;flex-shrink:0;">
+              <div style="font-size:7px;font-weight:700;color:#374151;background:#f3f4f6;padding:3px 8px;border-radius:20px;">&#127963; District</div>
+              <div style="font-size:7px;font-weight:700;color:#374151;background:#f3f4f6;padding:3px 8px;border-radius:20px;">&#128214; State News</div>
+              <div style="font-size:7px;font-weight:700;color:#374151;background:#f3f4f6;padding:3px 8px;border-radius:20px;">&#9728; Spirituality</div>
+            </div>
+          </div>
+        </div>
+        <div class="project-info">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;">
+            <div>
+              <div class="project-type">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+                News Web Application
+              </div>
+              <h3>Bharatha Bhoomi</h3>
+            </div>
+            <div class="project-num">02</div>
+          </div>
+          <p>A full-featured Tamil &amp; English news portal with categories, district-wise news, breaking news, article pages with comments — built for a RNI-registered publication.</p>
+          <div class="project-tags">
+            <span class="tag">News Portal</span><span class="tag">Bilingual</span><span class="tag">District Filter</span><span class="tag">Comments</span><span class="tag">RNI Certified</span>
+          </div>
+          <div class="project-footer">
+            <a href="https://www.bharathabhoomi.news/" target="_blank" class="project-link">
+              Visit Website
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
 
 <!-- ABOUT -->
 <div class="about-section">
@@ -446,7 +489,7 @@
   </div>
   <div class="about-visual reveal">
     <div class="about-stat-card"><div class="stat-big" style="color:white">Reliable</div><div class="stat-desc">Software you can depend on every day</div></div>
-    <div class="about-stat-card"><div class="stat-big" style="color:var(--sky)">Fast</div><div class="stat-desc">Quick delivery & setup</div></div>
+    <div class="about-stat-card"><div class="stat-big" style="color:var(--sky)">Fast</div><div class="stat-desc">Quick delivery &amp; setup</div></div>
     <div class="about-stat-card"><div class="stat-big" style="color:var(--ink)">Support</div><div class="stat-desc">Always here when you need us</div></div>
   </div>
 </div>
@@ -467,9 +510,9 @@
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 .01h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92v2z"/></svg>
         +91 99442 26038
       </a>
-      <a href="mailto:sixforcetechnologies@gmail.com" class="btn-ghost-white">
+      <a href="/cdn-cgi/l/email-protection#afdcc6d7c9c0ddcccadbcaccc7c1c0c3c0c8c6cadcefc8c2cec6c381ccc0c2" class="btn-ghost-white">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
-        sixforcetechnologies@gmail.com
+        <span class="__cf_email__" data-cfemail="6e1d071608011c0d0b1a0b0d060001020109070b1d2e09030f0702400d0103">[email&#160;protected]</span>
       </a>
     </div>
   </div>
@@ -481,29 +524,47 @@
     <div class="footer-logo">Six<span>Force</span> Technologies</div>
     <div class="footer-links">
       <a href="tel:+919944226038">+91 99442 26038</a>
-      <a href="mailto:sixforcetechnologies@gmail.com">sixforcetechnologies@gmail.com</a>
+      <a href="/cdn-cgi/l/email-protection#52213b2a343d2031372637313a3c3d3e3d353b372112353f333b3e7c313d3f"><span class="__cf_email__" data-cfemail="e3908a9b858c9180869786808b8d8c8f8c848a8690a3848e828a8fcd808c8e">[email&#160;protected]</span></a>
     </div>
   </div>
-  <div class="footer-bottom">© 2026 <strong style="color:rgba(255,255,255,0.45)">SixForce Technologies</strong> · All rights reserved</div>
+  <div class="footer-bottom">&copy; 2026 <strong style="color:rgba(255,255,255,0.45)">SixForce Technologies</strong> &middot; All rights reserved</div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   // Nav scroll shadow
-  const nav = document.getElementById('nav');
-  window.addEventListener('scroll', () => {
+  var nav = document.getElementById('nav');
+  window.addEventListener('scroll', function() {
     nav.classList.toggle('scrolled', window.scrollY > 30);
   });
 
-  // Reveal on scroll
-  const reveals = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  }, { threshold: 0.12 });
-  reveals.forEach(el => observer.observe(el));
-</script>
-</body>
-</html>
+  // BULLETPROOF REVEAL
+  // Elements are visible by default via CSS.
+  // JS hides them (.ready) then reveals on scroll (.visible).
+  // If JS or observer fails, 2.5s fallback shows everything.
+  function initReveal() {
+    var els = document.querySelectorAll('.reveal');
+
+    // Hide all for animation
+    els.forEach(function(el) { el.classList.add('ready'); });
+
+    // Safety fallback: show all after 2.5s
+    var fallback = setTimeout(function() {
+      els.forEach(function(el) { el.classList.add('visible'); });
+    }, 2500);
+
+    if (!('IntersectionObserver' in window)) {
+      clearTimeout(fallback);
+      els.forEach(function(el) { el.classList.add('visible'); });
+      return;
+    }
+
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+
+    els.
