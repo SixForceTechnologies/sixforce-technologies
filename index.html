@@ -441,7 +441,7 @@
         +91 99442 26038
       </a>
       <!-- Email built by JS below — Cloudflare cannot touch it -->
-      <a id="email-cta-btn" href="#" class="btn-ghost-white">
+      <a id="email-cta-btn" href="#" class="btn-ghost-white" title="Click to copy email" style="cursor:pointer;">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
         <span id="email-cta-text">sixforcetechnologies&#64;gmail.com</span>
       </a>
@@ -468,15 +468,24 @@
     nav.classList.toggle('scrolled', window.scrollY > 30);
   });
 
-  // Set mailto links via JS — Cloudflare cannot obfuscate JS strings
+  // Email links — open Gmail compose with To + Subject pre-filled
   (function() {
     var e = 'sixforcetechnologies' + '\x40' + 'gmail.com';
-    var m = 'mailto:' + e;
-    var els = ['email-cta-btn','email-footer-btn'];
-    els.forEach(function(id) {
+    var subject = encodeURIComponent('Project Enquiry – SixForce Technologies');
+    var gmailLink = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + e + '&su=' + subject;
+
+    var ids = ['email-cta-btn', 'email-footer-btn'];
+    ids.forEach(function(id) {
       var el = document.getElementById(id);
-      if (el) { el.href = m; el.textContent = e; }
+      if (!el) return;
+      el.textContent = e;
+      el.href = gmailLink;
+      el.target = '_blank';
+      el.rel = 'noopener noreferrer';
     });
+
+    var span = document.getElementById('email-cta-text');
+    if (span) span.textContent = e;
   })();
 
   // Bulletproof reveal
